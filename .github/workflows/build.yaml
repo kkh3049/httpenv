@@ -22,5 +22,5 @@ jobs:
       - name: Docker build
         uses: docker/build-push-action@v5
         with:
-          push: ${{ gihub.event_name != 'pull_request' }}
+          push: ${{ github.event_name != 'pull_request' }}
           tags: kkh0349/brettfisher/httpenv:latest, kkh3049/bretfisher/httpenv:01
